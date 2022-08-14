@@ -1,0 +1,9 @@
+---
+- name : install apache,mariadb and php
+  hosts: all
+  become: yes
+  roles:
+    - apache2
+    - index.html
+    - mariadb
+    - php

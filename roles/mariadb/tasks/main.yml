@@ -1,0 +1,14 @@
+ - name: Installing Mariadb
+   apt:
+     name:
+       - mariadb-server
+       - pip
+     state: present
+
+ - name: adding mariadb user and pass
+   ignore_errors: yes
+   mysql_user:
+      login_user: root
+      login_password: ''
+      user: root
+      password: "{{ mysql_root }}"
